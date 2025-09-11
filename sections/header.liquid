@@ -78,7 +78,7 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: {{ section.settings.padding_top }}px 2rem {{ section.settings.padding_bottom }}px 2rem;
   }
 
   .section-header {
@@ -247,7 +247,9 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- if section.settings.enable_search_icon -%}
+        {%- render 'header-search', input_id: 'Search-In-Modal' -%}
+      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled -%}
       <a  href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__menu-item link">
@@ -553,6 +555,12 @@
     {
       "type": "header",
       "content": "t:sections.header.settings.header__utilities.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search_icon",
+      "default": false,
+      "label": "t:sections.header.settings.enable_search_icon.label",
     },
     {
       "type": "checkbox",

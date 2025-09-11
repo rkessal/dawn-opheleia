@@ -12,6 +12,12 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "image_bpACjx": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify://shop_images/logo.svg"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -39,12 +45,14 @@
         }
       },
       "block_order": [
+        "image_bpACjx",
         "heading",
         "text_fKcJ8V",
         "button"
       ],
       "custom_css": [],
       "settings": {
+        "image": "shopify://shop_images/a3da64493c7c527dc3c5a95603cd57501a141e0e.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
@@ -60,6 +68,12 @@
     "rich_text_neLnRB": {
       "type": "rich-text",
       "blocks": {
+        "image_Xf3rtt": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify://shop_images/logo-black.svg"
+          }
+        },
         "heading_dfDYra": {
           "type": "heading",
           "settings": {
@@ -86,6 +100,7 @@
         }
       },
       "block_order": [
+        "image_Xf3rtt",
         "heading_dfDYra",
         "text_9T6gMD",
         "button_hXqMpy"
@@ -106,8 +121,8 @@
       "settings": {
         "blog": "",
         "post_limit": 2,
-        "heading": "Blog posts",
-        "heading_size": "h1",
+        "heading": "",
+        "heading_size": "h2",
         "columns_desktop": 2,
         "show_view_all": true,
         "show_image": true,
@@ -177,6 +192,12 @@
     "image_banner_GAfN4V": {
       "type": "image-banner",
       "blocks": {
+        "image_UKEyEA": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify://shop_images/logo.svg"
+          }
+        },
         "text_3em9Ha": {
           "type": "text",
           "settings": {
@@ -197,10 +218,12 @@
         }
       },
       "block_order": [
+        "image_UKEyEA",
         "text_3em9Ha",
         "buttons_YrCL4y"
       ],
       "settings": {
+        "image": "shopify://shop_images/bg-cta.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
