@@ -20,6 +20,16 @@
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+            {%- when 'image' -%}
+              <div class="banner__block-image" {{ block.shopify_attributes }}>
+                {%- if block.settings.block_image != blank -%}
+                  {{ block.settings.block_image | image_url: width: 600 | image_tag: 
+                    loading: 'lazy',
+                    width: block.settings.block_image.width,
+                    height: block.settings.block_image.height
+                  }}
+                {%- endif -%}
+              </div>
             {%- when 'heading' -%}
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -285,6 +295,18 @@
       ]
     },
     {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
       "type": "button",
       "name": "t:sections.rich-text.blocks.buttons.name",
       "limit": 2,
@@ -344,6 +366,9 @@
         },
         {
           "type": "text"
+        },
+        {
+          "type": "image"
         },
         {
           "type": "button"

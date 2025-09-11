@@ -119,6 +119,16 @@
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
+          {%- when 'image' -%}
+            <div class="banner__block-image" {{ block.shopify_attributes }}>
+              {%- if block.settings.block_image != blank -%}
+                {{ block.settings.block_image | image_url: width: 600 | image_tag: 
+                  loading: 'lazy',
+                  width: block.settings.block_image.width,
+                  height: block.settings.block_image.height
+                }}
+              {%- endif -%}
+            </div>
           {%- when 'heading' -%}
             <h2
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
@@ -436,6 +446,18 @@
       ]
     },
     {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
       "type": "buttons",
       "name": "t:sections.image-banner.blocks.buttons.name",
       "limit": 1,
@@ -496,6 +518,9 @@
         },
         {
           "type": "text"
+        },
+        {
+          "type": "image"
         },
         {
           "type": "buttons"
