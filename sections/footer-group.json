@@ -13,19 +13,72 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "cell_HDq97W": {
+          "type": "cell",
+          "settings": {
+            "heading": "Menu",
+            "subheading": "",
+            "content_type": "menu",
+            "menu": "footer"
+          }
+        },
+        "cell_mPkND8": {
+          "type": "cell",
+          "settings": {
+            "heading": "Information",
+            "subheading": "",
+            "content_type": "country",
+            "menu": "footer"
+          }
+        },
+        "cell_eLtgA8": {
+          "type": "cell",
+          "settings": {
+            "heading": "Community",
+            "subheading": "",
+            "content_type": "menu",
+            "menu": "footer"
+          }
+        },
+        "cell_LQnAca": {
+          "type": "cell",
+          "settings": {
+            "heading": "Policies",
+            "subheading": "© Opheleia, 2025 All rights reserved.",
+            "content_type": "menu",
+            "menu": "footer"
+          }
+        },
+        "brand_information_zLNiqw": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": false
+          }
+        }
+      },
+      "block_order": [
+        "cell_HDq97W",
+        "cell_mPkND8",
+        "cell_eLtgA8",
+        "cell_LQnAca",
+        "brand_information_zLNiqw"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_bg_image": "shopify://shop_images/f103b75fd49587677760ccac2c5b7b277ef524de.jpg",
+        "footer_menu_1": "Subscribe to our emails",
+        "newsletter_heading": "Our philosophy blends timeless design with conscious choices, creating jewellery you can wear with pride for years to come.",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
