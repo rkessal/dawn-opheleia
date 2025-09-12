@@ -152,7 +152,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} {% if block.settings.button_style_low_1 %} button--low-opacity{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -483,6 +483,12 @@
           "id": "button_style_secondary_1",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_low_1",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_low_1.label"
         },
         {
         "type": "header",

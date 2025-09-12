@@ -123,6 +123,7 @@
                   image_shape: section.settings.image_shape,
                   lazy_load: lazy_load,
                   show_secondary_image: section.settings.show_secondary_image,
+                  text_overlay: section.settings.text_overlay,
                   show_vendor: section.settings.show_vendor,
                   show_rating: section.settings.show_rating,
                   skip_styles: skip_card_product_styles,
@@ -155,6 +156,7 @@
               {% render 'card-product',
                 show_vendor: section.settings.show_vendor,
                 media_aspect_ratio: section.settings.image_ratio,
+                text_overlay: section.settings.text_overlay,
                 image_shape: section.settings.image_shape,
                 lazy_load: false,
                 placeholder_image: placeholder_image
@@ -428,6 +430,12 @@
       ],
       "default": "default",
       "label": "t:sections.all.image_shape.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_overlay",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.text_overlay.label"
     },
     {
       "type": "checkbox",

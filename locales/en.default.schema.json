@@ -819,6 +819,9 @@
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
+        "text_overlay": {
+          "label": "Overlay text on image"
+        },
         "show_vendor": {
           "label": "Vendor"
         },
@@ -1313,6 +1316,9 @@
             },
             "button_style_secondary_1": {
               "label": "Outline style"
+            },
+            "button_style_low_1": {
+              "label": "Low opacity style"
             },
             "header_2": {
               "content": "Button 2"
@@ -1822,6 +1828,9 @@
         },
         "show_secondary_image": {
           "label": "Show second image on hover"
+        },
+        "text_overlay": {
+          "label": "Overlay text on image"
         },
         "show_vendor": {
           "label": "Vendor"
@@ -2463,6 +2472,9 @@
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
+        "text_overlay": {
+          "label": "Overlay text on image"
+        },
         "show_vendor": {
           "label": "Vendor"
         },
@@ -2839,6 +2851,9 @@
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
+        "text_overlay": {
+          "label": "Overlay text on image"
+        },
         "show_vendor": {
           "label": "Vendor"
         },
@@ -2953,6 +2968,9 @@
             },
             "button_style_secondary_1": {
               "label": "Outline style"
+            },
+            "button_style_link_1": {
+              "label": "Simple link style"
             },
             "header_button2": {
               "content": "Button 2"

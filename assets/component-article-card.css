@@ -7,6 +7,7 @@
 .article {
   display: flex;
   align-items: center;
+  aspect-ratio: 83.4 / 95;
 }
 
 .article.grid__item {
@@ -17,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.article-card__image-wrapper > a {
+.article-card__image-wrapper>a {
   display: block;
 }
 
