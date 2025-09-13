@@ -78,6 +78,12 @@
           },
           {
             "type": "color",
+            "id": "footer_grid_text",
+            "label": "t:settings_schema.colors.settings.footer_grid_text.label",
+            "default": "#8EE0F5"
+          },
+          {
+            "type": "color",
             "id": "shadow",
             "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"

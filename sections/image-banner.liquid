@@ -62,6 +62,9 @@
         if section.settings.image_2 != blank
           assign image_class = 'banner__media-image-half'
         endif
+        if section.settings.fixed_image == true
+          assign image_class = image_class | append: 'banner__media-image-fixed'
+        endif
         if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
           assign sizes = stacked_sizes
         elsif section.settings.image_2 != blank
@@ -189,6 +192,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "fixed_image",
+      "default": false,
+      "label": "t:sections.image-banner.settings.fixed_image.label"
     },
     {
       "type": "image_picker",

@@ -4,6 +4,7 @@
   flex-direction: column;
   z-index: auto;
   isolation: isolate;
+  height: 100vh;
 }
 
 .banner__box {
@@ -11,7 +12,7 @@
 }
 
 .banner__block-image {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   max-width: 100%;
 }
 
@@ -176,6 +177,10 @@
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.banner__media-image-fixed {
+  /* position: fixed !important; */
 }
 
 .banner__media-half {
@@ -475,10 +480,6 @@
   .banner--content-align-right .banner__buttons--multiple {
     justify-content: flex-end;
   }
-}
-
-.banner__box>*+.banner__buttons {
-  margin-top: 2rem;
 }
 
 @media screen and (max-width: 749px) {

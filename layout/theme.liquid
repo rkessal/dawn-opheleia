@@ -91,6 +91,7 @@
         --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
         --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+        --color-footer-grid-background: {{ scheme.settings.footer_grid_text.red }}, {{ scheme.settings.footer_grid_text.green }},{{ scheme.settings.footer_grid_text.blue }};
       }
       {% endfor %}
 
@@ -100,7 +101,7 @@
       }
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: 'InterTight', {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
@@ -240,8 +241,7 @@
         grid-template-columns: 100%;
         min-height: 100%;
         margin: 0;
-        font-size: 1.5rem;
-        letter-spacing: -0.05rem;
+        font-size: 1.3rem;
         line-height: 1 / var(--font-body-scale);
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);

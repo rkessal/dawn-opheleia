@@ -142,6 +142,9 @@
         "secondary_button_label": {
           "label": "Outline button"
         },
+        "footer_grid_text": {
+          "label": "Footer grid text hover"
+        },
         "shadow": {
           "label": "Shadow"
         }
@@ -779,6 +782,9 @@
         "columns_desktop": {
           "label": "Columns"
         },
+        "row_gap": {
+          "label": "Row gap"
+        },
         "show_view_all": {
           "label": "\"View all\" button",
           "info": "Visible if collection has more products than shown"
@@ -1180,6 +1186,9 @@
         },
         "image_2": {
           "label": "Image 2"
+        },
+        "fixed_image": {
+          "label": "Fixed Image"
         },
         "image_overlay_opacity": {
           "label": "Overlay opacity"
@@ -2328,6 +2337,9 @@
             },
             "image_2": {
               "label": "Image"
+            },
+            "fixed_image": {
+              "label": "Fixed Image"
             },
             "heading_2": {
               "label": "Heading",

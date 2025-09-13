@@ -68,6 +68,7 @@ h1,
 }
 
 @media only screen and (min-width: 750px) {
+
   h1,
   .h1 {
     font-size: calc(var(--font-heading-scale) * 4rem);
@@ -80,6 +81,7 @@ h2,
 }
 
 @media only screen and (min-width: 750px) {
+
   h2,
   .h2 {
     font-size: calc(var(--font-heading-scale) * 2.4rem);
@@ -102,7 +104,6 @@ h2,
   min-width: 12rem;
   height: auto;
   font-size: 1.5rem;
-  letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 
@@ -208,7 +209,6 @@ h2,
   border-radius: 4rem;
   display: inline-block;
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
   line-height: 1;
   padding: 0.6rem 1.3rem;
   text-align: center;
@@ -246,7 +246,7 @@ h2,
   margin: 0 auto;
 }
 
-.gift-card__buttons > .button {
+.gift-card__buttons>.button {
   display: block;
   margin: 1rem 0;
 }

@@ -59,11 +59,11 @@
 }
 
 .rich-text__blocks>*+* {
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .rich-text__blocks>*+a {
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .rich-text__buttons {

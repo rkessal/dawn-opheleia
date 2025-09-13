@@ -167,13 +167,13 @@
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
-                <div class="newsletter-form__field-wrapper">
+                <div class="footer__content newsletter-form__field-wrapper">
                   <div class="field">
                     <input
                       id="NewsletterForm--{{ section.id }}"
                       type="email"
                       name="contact[email]"
-                      class="field__input"
+                      class="field__input button--low-opacity"
                       value="{{ form.email }}"
                       aria-required="true"
                       autocorrect="off"
@@ -199,7 +199,7 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      <span class="svg-wrapper">
+                      <span class="svg-wrapper svg_wrapper__white-icon">
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       </span>
                     </button>
@@ -276,7 +276,7 @@
         {% elsif block.settings.content_type == 'country' %}
           {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
             <localization-form>
-              {%- form 'localization', id: 'FooterCountryForm-' | append: block.id, class: 'localization-form' -%}
+              {%- form 'localization', id: 'FooterCountryForm-' | append: 'localization', class: 'localization-form' -%}
                 {%- render 'country-localization', localPosition: 'FooterCountry' -%}
               {%- endform -%}
             </localization-form>

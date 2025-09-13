@@ -55,6 +55,32 @@
   object-fit: cover;
 }
 
+.footer__grid-item:hover {
+  background-color: rgb(var(--color-foreground));
+}
+
+.footer__grid-item:hover * {
+  color: rgb(var(--color-footer-grid-background));
+}
+
+.footer__grid-item:hover .disclosure__button.localization-form__select,
+.footer__grid-item:hover .disclosure__list-wrapper {
+  background-color: transparent;
+}
+
+.footer__content.newsletter-form__field-wrapper .field__label {
+  color: white;
+}
+
+.footer__content.newsletter-form__field-wrapper .field::after {
+  box-shadow: none;
+}
+
+.footer__content.newsletter-form__field-wrapper .field__input:focus {
+  box-shadow: none;
+}
+
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: block;
@@ -200,6 +226,14 @@
 .footer__grid-item__link {
   text-transform: uppercase;
   color: rgb(var(--color-foreground));
+}
+
+.footer__grid-item__menu li {
+  margin-bottom: 1.5rem;
+}
+
+.footer__grid-item__menu li:last-child {
+  margin-bottom: 0;
 }
 
 
