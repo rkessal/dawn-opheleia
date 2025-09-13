@@ -38,7 +38,7 @@
             "heading": "Community",
             "subheading": "",
             "content_type": "menu",
-            "menu": "footer"
+            "menu": "footer-community"
           }
         },
         "cell_LQnAca": {
@@ -47,7 +47,7 @@
             "heading": "Policies",
             "subheading": "© Opheleia, 2025 All rights reserved.",
             "content_type": "menu",
-            "menu": "footer"
+            "menu": "footer-policies"
           }
         },
         "brand_information_zLNiqw": {
