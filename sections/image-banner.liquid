@@ -155,9 +155,16 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
+                  data-animate-btn
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} {% if block.settings.button_style_low_1 %} button--low-opacity{% endif %}"
                 >
-                  {{- block.settings.button_label_1 | escape -}}
+                  <div class="button__animate-wrapper">
+                    <span
+                      data-animate-btn-text="{{- block.settings.button_label_1 | escape -}}"
+                    >
+                      {{- block.settings.button_label_1 | escape -}}
+                    </span>
+                  </div>
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}

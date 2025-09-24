@@ -445,11 +445,17 @@
   line-height: 1;
 }
 
+
+
 .banner__text {
   margin-bottom: 4rem;
   max-width: 34rem;
   width: 100%;
   margin-inline: auto;
+}
+
+.banner__heading.h0 {
+  margin-bottom: 2rem;
 }
 
 .banner__buttons {

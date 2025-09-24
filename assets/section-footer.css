@@ -1,9 +1,9 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   display: flex;
   flex-direction: row;
   height: 100vh;
   min-height: 60rem;
+  padding: 2rem 0;
 }
 
 .footer:not(.color-scheme-1) {
@@ -57,15 +57,19 @@
 
 .footer__grid-item:hover {
   background-color: rgb(var(--color-foreground));
+  transition: background-color var(--duration-default) ease;
 }
 
 .footer__grid-item:hover * {
   color: rgb(var(--color-footer-grid-background));
+  transition: color var(--duration-default) ease;
 }
 
 .footer__grid-item:hover .disclosure__button.localization-form__select,
-.footer__grid-item:hover .disclosure__list-wrapper {
-  background-color: transparent;
+.footer__grid-item:hover .disclosure__list-wrapper,
+.footer__grid-item:hover .disclosure__list-wrapper .country-filter,
+.footer__grid-item:hover .disclosure__list-wrapper .country-filter .field__input {
+  background-color: rgb(var(--color-foreground));
 }
 
 .footer__content.newsletter-form__field-wrapper .field__label {
@@ -78,6 +82,10 @@
 
 .footer__content.newsletter-form__field-wrapper .field__input:focus {
   box-shadow: none;
+}
+
+.footer__content.newsletter-form__field-wrapper {
+  --alpha-button-background: 0
 }
 
 
@@ -316,6 +324,20 @@
 }
 
 @media screen and (max-width: 749px) {
+  .footer {
+    padding-bottom: 0 !important;
+    padding-inline: 1rem !important;
+    padding-top: 1rem !important;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__content-left {
+    order: 1;
+    margin-bottom: 0 !important;
+  }
 
   /*
     On a small screen we want all the items to be centered
@@ -457,6 +479,22 @@
 }
 
 @media screen and (max-width: 989px) {
+  .footer {
+    /* padding: 2rem !important; */
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer__content-right,
+  .footer__content-left {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .footer__content-left {
+    margin-bottom: 2rem;
+  }
+
   .footer-block__details-content .list-menu__item--link {
     padding-top: 1rem;
     padding-bottom: 1rem;

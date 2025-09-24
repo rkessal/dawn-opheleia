@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Scotch Display Roman";
+  font-weight: 200;
+  font-style: regular;
+  font-display: swap;
+  src: url('scotch-display-roman.woff2') format('woff2'), url('scotch-display-roman.woff') format('woff');
+}
+
+@font-face {
   font-family: 'InterTight';
   src: url("InterTight.woff2") format('woff2');
 }
@@ -108,6 +116,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 .utility-bar__grid.page-width {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+@media screen and (max-width: 749px) {
+  .page-width-desktop {
+    padding: 0 1rem;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -255,7 +269,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
+  font-family: "Scotch Display Roman";
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   /* letter-spacing: calc(var(--font-heading-scale) * 0.06rem); */
@@ -800,6 +814,12 @@ summary::-webkit-details-marker {
   padding-right: 1.5rem;
 }
 
+@media screen and (max-width: 749px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .title-wrapper--self-padded-mobile {
     padding-left: 0;
@@ -902,10 +922,15 @@ summary::-webkit-details-marker {
 }
 
 @media screen and (min-width: 750px) {
-  .grid__item {
+  .card__content--overlay .grid__item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
     max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
+  } */
 }
 
 .grid--gapless.grid {
@@ -1062,6 +1087,11 @@ summary::-webkit-details-marker {
     width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
   }
 
+  .grid__item--overlay {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
   .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,
   .grid--peek .grid__item {
     width: calc(50% - var(--grid-mobile-horizontal-spacing) - 3rem);
@@ -1093,6 +1123,11 @@ summary::-webkit-details-marker {
 
   .grid--2-col-tablet-down .grid__item {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+
+  .grid__item--overlay {
+    width: 100% !important;
+    max-width: 100%;
   }
 
   .grid--1-col-tablet-down.grid--peek .grid__item {
@@ -1170,6 +1205,30 @@ deferred-media {
 
 /* component-button */
 /* Button - default */
+
+
+[data-animate-btn] .button__animate-wrapper {
+  overflow: hidden;
+}
+
+[data-animate-btn] span {
+  position: relative;
+  display: inline-block;
+  transition: transform var(--duration-default) ease;
+}
+
+[data-animate-btn]:hover span {
+  transform: translateY(-100%);
+}
+
+[data-animate-btn-text]::after {
+  content: attr(data-animate-btn-text);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+}
+
 
 .button {
   text-transform: uppercase;
@@ -1287,9 +1346,9 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button:hover::after,
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
-  --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+  /* --border-offset: 1.3px; */
+  /* box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background)); */
 }
 
 .button--secondary:after {

@@ -55,7 +55,7 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+        class="card__inner  {% if text_overlay %}card__inner--overlay{% endif %} {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- if card_product.featured_media -%}
@@ -162,7 +162,7 @@
             </a>
           </h3>
           {% if text_overlay %}
-          <div>
+          <div class="card__description-overlay">
             {{ card_product.description | strip_html | truncate: 100 | escape }}
           </div>
           {% endif %}
@@ -593,7 +593,7 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
+        class="card__inner {% if text_overlay %}card__inner--overlay{% endif %} {% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
       >
         <div
           class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}"
