@@ -153,8 +153,10 @@ class FacetFiltersForm extends HTMLElement {
       }
     });
 
+    FacetFiltersForm.updateCheckboxActiveStates();
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
+
 
     if (countsToRender) {
       const closestJSFilterID = event.target.closest('.js-filter').id;
@@ -186,6 +188,19 @@ class FacetFiltersForm extends HTMLElement {
     });
 
     FacetFiltersForm.toggleActiveFacets(false);
+  }
+
+  static updateCheckboxActiveStates() {
+    document.querySelectorAll('.mobile-facets__checkbox').forEach(checkbox => {
+      const label = checkbox.closest('label');
+      if (label) {
+        if (checkbox.checked) {
+          label.classList.add('active');
+        } else {
+          label.classList.remove('active');
+        }
+      }
+    });
   }
 
   static renderAdditionalElements(html) {

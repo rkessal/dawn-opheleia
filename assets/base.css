@@ -1060,6 +1060,7 @@ summary::-webkit-details-marker {
 }
 
 @media screen and (max-width: 749px) {
+
   .grid--peek.slider--mobile {
     margin: 0;
     width: 100%;
@@ -1085,6 +1086,11 @@ summary::-webkit-details-marker {
 
   .grid--2-col-tablet-down .grid__item {
     width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+  }
+
+  .grid--1-col-mobile-down .grid__item {
+    width: 100%;
+    max-width: 100%;
   }
 
   .grid__item--overlay {

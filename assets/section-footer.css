@@ -205,6 +205,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .footer-block--newsletter {
+    margin-inline: -2rem;
+  }
+
   .footer-block.footer-block--menu:only-child {
     text-align: left;
   }
