@@ -325,7 +325,7 @@
 }
 
 .facets-layout-list li a {
-  color: #687565;
+  color: rgb(var(--color-contrast));
 }
 
 .facets-layout-list li {
@@ -1037,7 +1037,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__label {
-  color: #687565;
+  color: rgb(var(--color-contrast));
   padding: 0;
   width: 100%;
   transition: background-color 0.2s ease;

@@ -2,6 +2,17 @@ variant-selects {
   display: block;
 }
 
+.product-form__input.product-form__input--pill {
+  display: flex;
+  align-items: center;
+  margin: 5rem 0;
+  text-transform: uppercase;
+}
+
+.product-form__input.product-form__input--pill>div:first-of-type {
+  margin-right: 2rem;
+}
+
 .product--no-media .product-form__input--pill,
 .product--no-media .product-form__input--swatch,
 .product--no-media .product-form__input--dropdown {
@@ -58,15 +69,15 @@ variant-selects {
 
 /* Custom styles for Pill display type */
 .product-form__input--pill input[type='radio']+label {
-  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+  /* border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
   background-color: rgb(var(--color-background));
   color: rgba(var(--color-foreground));
   border-radius: var(--variant-pills-radius);
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-foreground)); */
   display: inline-block;
-  margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
+  margin-right: 2rem;
+  /* padding: 1rem 2rem; */
+  font-size: 1.2rem;
   line-height: 1;
   text-align: center;
   transition: border var(--duration-short) ease;
@@ -83,7 +94,7 @@ variant-selects {
   left: calc(var(--variant-pills-border-width) * -1);
   z-index: -1;
   border-radius: var(--variant-pills-radius);
-  box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset) var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
+  /* box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset) var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity)); */
 }
 
 .product-form__input--pill input[type='radio']+label:hover {
@@ -91,8 +102,9 @@ variant-selects {
 }
 
 .product-form__input--pill input[type='radio']:checked+label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  /* background-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background)); */
+  text-decoration: underline;
 }
 
 @media screen and (forced-colors: active) {

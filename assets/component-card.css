@@ -531,7 +531,7 @@
 }
 
 .card-information>.price {
-  color: #687565;
+  color: rgb(var(--color-contrast));
   font-size: 1.2rem;
   margin-top: 0 !important;
 

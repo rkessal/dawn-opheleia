@@ -622,6 +622,13 @@ details>* {
   text-decoration-thickness: 0.2rem;
 }
 
+.inline-richtext.subtitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: rgb(var(--color-contrast));
+  /* color: #687565; */
+}
+
 .icon-arrow {
   width: 1.5rem;
 }
@@ -908,6 +915,11 @@ summary::-webkit-details-marker {
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
   }
+}
+
+
+.grid--no-gap {
+  gap: 0;
 }
 
 .grid:last-child {

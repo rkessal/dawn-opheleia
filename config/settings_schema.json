@@ -87,6 +87,12 @@
             "id": "shadow",
             "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "contrast",
+            "label": "t:settings_schema.colors.settings.contrast.label",
+            "default": "#687565"
           }
         ],
         "role": {

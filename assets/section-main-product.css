@@ -17,13 +17,18 @@ product-info {
 
 .product__media-wrapper {
   padding-left: 0;
+  flex-grow: 0;
+}
+
+.product__info-wrapper .price-item {
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 750px) {
   .product__column-sticky {
     display: block;
     position: sticky;
-    top: 3rem;
+    top: 0;
     z-index: 2;
   }
 
@@ -32,7 +37,10 @@ product-info {
   }
 
   .product__info-wrapper {
-    padding: 0 0 0 5rem;
+    padding-left: calc((162 / 1728) * 100%);
+    padding-right: calc((142 / 1728) * 100%);
+    padding-top: 15rem;
+
   }
 
   .product__info-wrapper--extra-padding {
@@ -78,14 +86,8 @@ product-info {
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
   .product--small:not(.product--no-media) .product__info-wrapper {
-    max-width: 55%;
-    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
-
-  .product--medium:not(.product--no-media) .product__info-wrapper,
-  .product--small:not(.product--no-media) .product__media-wrapper {
-    max-width: 45%;
-    width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+    width: calc(50% - 1rem);
+    margin-left: -2rem;
   }
 }
 
@@ -266,7 +268,7 @@ a.product__text {
 }
 
 .product__accordion .accordion__content {
-  padding: 0 1rem;
+  padding-top: 0.5rem;
 }
 
 .product .price .badge {
@@ -529,7 +531,7 @@ a.product__text {
 
 @media screen and (min-width: 990px) {
   .product--stacked .product__media-item {
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 100%;
   }
 
   .product:not(.product--columns) .product__media-list .product__media-item:first-child,
@@ -1320,7 +1322,8 @@ a.product__text {
 }
 
 .product-media-container.constrain-height .media {
-  padding-top: min(var(--constrained-height), var(--ratio-percent));
+  /* padding-top: min(var(--constrained-height), var(--ratio-percent)); */
+  height: 100vh;
 }
 
 @media screen and (max-width: 749px) {

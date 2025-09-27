@@ -24,6 +24,10 @@
   .blog__posts.articles-wrapper {
     margin-bottom: 0;
   }
+
+  .blog__post .card__heading {
+    font-size: 2.2rem;
+  }
 }
 
 .blog__posts.articles-wrapper .article {

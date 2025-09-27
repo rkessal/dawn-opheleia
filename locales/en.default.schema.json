@@ -145,6 +145,9 @@
         "footer_grid_text": {
           "label": "Footer grid text hover"
         },
+        "contrast": {
+          "label": "Contrast"
+        },
         "shadow": {
           "label": "Shadow"
         }
