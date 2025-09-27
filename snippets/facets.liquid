@@ -885,7 +885,7 @@
     </h2>
     {%- render 'loading-spinner' -%}
   </div> {% endcomment %}
-  {%- if filter_type == 'drawer' -%}
+  {% comment %} {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
@@ -930,5 +930,5 @@
         </div>
       </form>
     </facet-filters-form>
-  {%- endif -%}
+  {%- endif -%} {% endcomment %}
 </div>
