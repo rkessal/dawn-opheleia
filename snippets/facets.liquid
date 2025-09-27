@@ -525,6 +525,13 @@
                 <div>
                   <span class="mobile-facets__summary__label">Collections</span>
                   <ul class="facets-layout facets-layout-list facets-layout-list--text mobile-facets__list list-unstyled" role="list">
+                    <li class="mobile-facets__item list-menu__item">
+                      <a href="/collections/all" class="link facets__label mobile-facets__label {% if results_url == '/collections/all' %} active" {% endif %}>
+                        <span class="facet-checkbox__text" aria-hidden="true">
+                          <span class="facet-checkbox__text-label">All</span> 
+                        </span>
+                      </a>
+                    </li>
                     {%- for collection in collections -%}
                         <li class="mobile-facets__item list-menu__item">
                     <a href="{{ collection.url }}" class="link facets__label mobile-facets__label {% if results_url == collection.url %} active" {% endif %}>

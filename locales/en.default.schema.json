@@ -1790,6 +1790,9 @@
         "show_collection_description": {
           "label": "Description"
         },
+        "collection_description_text": {
+          "label": "Description Text"
+        },
         "show_collection_image": {
           "label": "Image"
         }

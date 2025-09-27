@@ -19,6 +19,9 @@
 
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
+        {% if collection.description == blank %}
+            <div class="collection-hero__description rte">{{ section.settings.collection_description_text }}</div>
+        {% endif %}
       {%- endif -%}
     </div>
 
@@ -59,6 +62,11 @@
       "id": "show_collection_description",
       "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "collection_description_text",
+      "label": "t:sections.main-collection-banner.settings.collection_description_text.label"
     },
     {
       "type": "checkbox",
