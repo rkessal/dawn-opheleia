@@ -13,6 +13,7 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
+        "collection_description_text": "Our philosophy blends timeless design with conscious choices, creating jewellery you can wear with pride for years to come. We believe jewellery should be more than decoration — it should carry meaning, reflect values, and inspire connection.",
         "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
