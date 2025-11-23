@@ -12,16 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.shopify[\"jewelry-material\"] | metafield_text: field: 'label' }}",
+            "text_style": "subtitle"
+          }
         },
         "price": {
           "type": "price",
@@ -34,52 +34,93 @@
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
+        "collapsible_tab_TGzX6c": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Description",
+            "icon": "none",
+            "content": "{{ product.description }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_mAHNez": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.details | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_qqAUk3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material and care",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.material_and_care | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Qx39zr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Packaging",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.packaging | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_9iUPby": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping and retuns",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.shipping_and_retuns | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VBhQhA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Warranty",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.warranty | metafield_tag }}",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
+        "vendor",
         "price",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "description",
-        "share"
+        "collapsible_tab_TGzX6c",
+        "collapsible_tab_mAHNez",
+        "collapsible_tab_qqAUk3",
+        "collapsible_tab_Qx39zr",
+        "collapsible_tab_9iUPby",
+        "collapsible_tab_VBhQhA"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "hover",
         "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "enable_video_looping": false
       }
     },
     "related-products": {
@@ -96,8 +137,8 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },

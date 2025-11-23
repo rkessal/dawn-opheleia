@@ -30,42 +30,46 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                  role="list"
-                >
+                <ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
                   {%- for childlink in link.links -%}
-                    <li>
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </li>
+                  <li>
+                    <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                      {% if childlink.current %} aria-current="page" {% endif %}>
+                      {{ childlink.title | escape }}
+                    </a>
+                    {%- if childlink.links != blank -%}
+                    <ul class="list-unstyled" role="list">
+                      {%- for grandchildlink in childlink.links -%}
+                      <li>
+                        <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                          href="{{ grandchildlink.url }}"
+                          class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %} mega-menu__link-sub"
+                          {% if grandchildlink.current %} aria-current="page" {% endif %}>
+                          {{ grandchildlink.title | escape }}
+                        </a>
+                      </li>
+                      {%- endfor -%}
+                    </ul>
+                    {%- endif -%}
+                  </li>
                   {%- endfor -%}
+                  <li class="mega-menu__brand">
+                    <span id="HeaderMenu-brand" class="mega-menu__link--level-2">
+                      Made in Australia
+                    </span>
+                    <span id="HeaderMenu-brand" class="mega-menu__link--level-2 level-2__bottom">
+                      © Opheleia, 2025 All rights reserved.
+                    </span>
+                  </li>
+                  <li>
+                    <img
+                      src="{{ section.settings.menu.mega-menu-decorative-image.url | asset_url }}"
+                      alt=""
+                      class="mega-menu__decorative-image"
+                      aria-hidden="true"
+                    />
+                  </li>
                 </ul>
               </div>
             </details>
